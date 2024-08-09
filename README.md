@@ -1,6 +1,6 @@
 <hr><h1>Swift Visual Novels Language Extension</h1>
 
-<img alt="Swift Visual Novels Language" src="https://github.com/PinkQween/SVN-VSCode-Support/blob/main/SVN.png">
+<img alt="Swift Visual Novels Language" src="./SVN.png">
 
 <h2>Description</h2>
 

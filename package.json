@@ -2,6 +2,12 @@
   "name": "swift-visual-novels",
   "displayName": "Swift Visual Novels Language",
   "description": "Language support for Swift Visual Novels",
+  "publisher": "pinkqween",
+  "homepage": "https://github.com/PinkQween/SVN-VSCode-Support",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pinkqween/SVN-VSCode-Support.git"
+  },
   "icon": "./SVN.png",
   "version": "0.0.1",
   "engines": {
