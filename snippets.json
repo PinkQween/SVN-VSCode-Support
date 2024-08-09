@@ -1,0 +1,60 @@
+{
+    "route": {
+        "scope": "swiftVisualNovels",
+        "prefix": ["r", "route"],
+        "description": "Define a route for the game",
+        "body": "route(${1:boolean}) {\n\t${2:code}\n}"
+    },
+    "background": {
+        "scope": "swiftVisualNovels",
+        "prefix": [
+            "bg",
+            "background",
+            "b"
+        ],
+        "description": "Define a background for the scene",
+        "body": "background ${1:string)"
+    },
+    "remove": {
+        "scope": "swiftVisualNovels",
+        "prefix": ["rm"],
+        "description": "Removes an element from the scene",
+        "body": "remove"
+    },
+    "text": {
+        "scope": "swiftVisualNovels",
+        "prefix": ["t", "text"],
+        "description": "Displays text in the scene",
+        "body": "text ${1:string}"
+    },
+    "speaker": {
+        "scope": "swiftVisualNovels",
+        "prefix": ["s", "sp", "speak"],
+        "description": "Displays a speaker in the scene",
+        "body": "speaker ${1:string}"
+    },
+    "update": {
+        "scope": "swiftVisualNovels",
+        "prefix": ["u"],
+        "description": "Updates the scene",
+        "body": "update"
+    },
+    "character": {
+        "scope": "swiftVisualNovels",
+        "prefix": ["c", "char", "chr"],
+        "description": "add a character in the scene",
+        "body": "character ${1:string} ${2:string} ${3:double}"
+    },
+    "new": {
+        "scope": "swiftVisualNovels",
+        "prefix": ["n", "nc", "nchr", "nchar"],
+        "description": "Creates a new character",
+        "body": "new character ${1:string} ${2:[string]}"
+    },
+    "music": {
+        "scope": "swiftVisualNovels",
+        "prefix": ["m", "mu", "msc"],
+        "description": "Plays/stops music until another music command",
+        "body": "music"
+    }
+}

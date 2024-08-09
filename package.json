@@ -1,44 +1,45 @@
 {
-  "main": "./dist/extension.cjs",
-  "module": "index.ts",
-  "dependencies": {
-    "@types/vscode": "^1.86.0"
-  },
-  "devDependencies": {
-    "@types/bun": "latest",
-    "@vscode/vsce": "^2.23.0",
-    "esbuild": "^0.20.0"
-  },
-  "peerDependencies": {
-    "typescript": "^5.0.0"
-  },
-  "type": "module",
-  "scripts": {
-    "dev": "echo 'Open this directory in VSCode and then run your extension with F5 or `Run and Debug > Run Extension`!'",
-    "build": "bun run ./scripts/build-with-esbuild.ts",
-    "watch": "bun run ./scripts/watch-with-esbuild.ts",
-    "vsce-package": "bun run vsce package",
-    "package": "bun run build && bun run vsce-package",
-    "clean": "rm -r ./dist"
-  },
-  "//": "START EXTENSION ATTRIBUTES",
-  "name": "VSCodeExtension",
+  "name": "swift-visual-novels",
+  "displayName": "Swift Visual Novels Language",
+  "description": "Language support for Swift Visual Novels",
+  "icon": "./SVN.png",
   "version": "0.0.1",
-  "description": "Extension description",
-  "displayName": "Extension display name",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/YOURNAME"
+  "engines": {
+    "vscode": "^1.92.0"
   },
+  "categories": [
+    "Programming Languages",
+    "Snippets"
+  ],
   "contributes": {
-    "commands": [
+    "languages": [
       {
-        "command": "bun-vscode-extension.helloworld",
-        "title": "Hello World"
+        "id": "swiftVisualNovels",
+        "extensions": [
+          ".svn"
+        ],
+        "aliases": [
+          "Swift Visual Novels"
+        ],
+        "configuration": "./language-configuration.json",
+        "icon": {
+          "light": "./SVN.png",
+          "dark": "./SVN.png"
+        }
+      }
+    ],
+    "grammars": [
+      {
+        "language": "swiftVisualNovels",
+        "scopeName": "source.swiftVisualNovels",
+        "path": "./syntaxes/swiftVisualNovels.tmLanguage.json"
+      }
+    ],
+    "snippets": [
+      {
+        "language": "swiftVisualNovels",
+        "path": "./snippets.json"
       }
     ]
-  },
-  "engines": {
-    "vscode": "^1.86.0"
   }
 }

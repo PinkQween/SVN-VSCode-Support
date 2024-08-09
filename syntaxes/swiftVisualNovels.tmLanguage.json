@@ -1,0 +1,186 @@
+{
+    "scopeName": "source.swiftVisualNovels",
+    "patterns": [
+        {
+            "name": "comment.block.swiftVisualNovels",
+            "begin": "/\\*",
+            "end": "\\*/",
+            "patterns": [
+                {
+                    "name": "comment.block.documentation.swiftVisualNovels",
+                    "begin": "/\\*",
+                    "end": "\\*/",
+                    "patterns": [
+                        {
+                            "name": "comment.block.documentation.param.swiftVisualNovels",
+                            "begin": "@param",
+                            "end": "\\n"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "comment.line.double-slash.swiftVisualNovels",
+            "match": "//.*"
+        },
+        {
+            "name": "comment.line.hash.swiftVisualNovels",
+            "match": "#.*"
+        },
+        {
+            "name": "keyword.control.swiftVisualNovels",
+            "match": "\\b(background|character|text|speaker|remove|route|update|new|music)\\b"
+        },
+        {
+            "name": "keyword.declaration.swiftVisualNovels",
+            "match": "\\b(var|let|const)\\b"
+        },
+        {
+            "include": "#brackets"
+        },
+        {
+            "include": "#strings"
+        },
+        {
+            "include": "#booleans"
+        },
+        {
+            "include": "#integers"
+        },
+        {
+            "include": "#doubles"
+        },
+        {
+            "include": "#character-definitions"
+        }
+    ],
+    "repository": {
+        "brackets": {
+            "patterns": [
+                {
+                    "name": "punctuation.definition.brackets.swiftVisualNovels",
+                    "match": "[{}]"
+                }
+            ]
+        },
+        "strings": {
+            "patterns": [
+                {
+                    "name": "string.quoted.double.swiftVisualNovels",
+                    "begin": "\"",
+                    "end": "\"",
+                    "patterns": [
+                        {
+                            "name": "constant.character.escape.swiftVisualNovels",
+                            "match": "\\\\."
+                        }
+                    ]
+                }
+            ]
+        },
+        "booleans": {
+            "patterns": [
+                {
+                    "name": "constant.language.boolean.swiftVisualNovels",
+                    "match": "\\b(true|false)\\b"
+                }
+            ]
+        },
+        "integers": {
+            "patterns": [
+                {
+                    "name": "constant.numeric.integer.swiftVisualNovels",
+                    "match": "\\b\\d+\\b"
+                }
+            ]
+        },
+        "double": {
+            "patterns": {
+                "name": "constant.numeric.double.swiftVisualNovels",
+                "match": "\\b\\d+(\\.\\d+)?([eE][+-]?\\d+)?\\b"
+            }
+        },
+        "declarations": {
+            "patterns": [
+                {
+                    "name": "keyword.declaration.swiftVisualNovels",
+                    "match": "\\b(var|let|const)\\s+([a-zA-Z_][a-zA-Z_0-9]*)\\s*:\\s*(string|integer|boolean|double|character-definitions)\\b"
+                }
+            ]
+        },
+        "character-definitions": {
+            "patterns": [
+                {
+                    "name": "keyword.character-definition.swiftVisualNovels",
+                    "begin": "\\blet\\s+([a-zA-Z_][a-zA-Z_0-9]*)\\s*=\\s*new\\s+character\\s*\"",
+                    "end": "\"",
+                    "patterns": [
+                        {
+                            "name": "string.quoted.double.swiftVisualNovels",
+                            "begin": "\"",
+                            "end": "\"",
+                            "patterns": [
+                                {
+                                    "name": "constant.character.escape.swiftVisualNovels",
+                                    "match": "\\\\."
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "name": "keyword.character-definition.swiftVisualNovels",
+                    "begin": "\\[",
+                    "end": "\\]",
+                    "patterns": [
+                        {
+                            "name": "string.quoted.double.swiftVisualNovels",
+                            "begin": "\"",
+                            "end": "\"",
+                            "patterns": [
+                                {
+                                    "name": "constant.character.escape.swiftVisualNovels",
+                                    "match": "\\\\."
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "name": "keyword.character-definition.swiftVisualNovels",
+                    "begin": "\\[",
+                    "end": "\\]",
+                    "patterns": [
+                        {
+                            "name": "string.quoted.double.swiftVisualNovels",
+                            "begin": "\"",
+                            "end": "\"",
+                            "patterns": [
+                                {
+                                    "name": "constant.character.escape.swiftVisualNovels",
+                                    "match": "\\\\."
+                                }
+                            ]
+                        },
+                        {
+                            "name": "punctuation.separator.key-value.swiftVisualNovels",
+                            "match": ":"
+                        },
+                        {
+                            "name": "string.quoted.double.swiftVisualNovels",
+                            "begin": "\"",
+                            "end": "\"",
+                            "patterns": [
+                                {
+                                    "name": "constant.character.escape.swiftVisualNovels",
+                                    "match": "\\\\."
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
+    }
+}
