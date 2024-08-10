@@ -55,18 +55,9 @@
             "\\\"",
         ]
     },
-    "integers": {
-        
-    },
-    "booleans": {
-
-    },
-    "double": {
-
-    },
     "keywords": [
         "var",
         "let",
         "const"
-    ]
+    ],
 }

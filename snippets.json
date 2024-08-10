@@ -13,7 +13,7 @@
             "b"
         ],
         "description": "Define a background for the scene",
-        "body": "background ${1:string)"
+        "body": "background ${1:string})"
     },
     "remove": {
         "scope": "swiftVisualNovels",
