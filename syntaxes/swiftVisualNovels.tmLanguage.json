@@ -83,21 +83,36 @@
                             "match": "\\\\."
                         },
                         {
-                            "name": "variable.injection.swiftVisualNovels",
+                            "name": "template.expression.swiftVisualNovels",
                             "begin": "\\$\\{",
                             "end": "\\}",
+                            "beginCaptures": {
+                                "0": {
+                                    "name": "punctuation.definition.template-expression.begin.swiftVisualNovels"
+                                }
+                            },
+                            "endCaptures": {
+                                "0": {
+                                    "name": "punctuation.definition.template-expression.end.swiftVisualNovels"
+                                }
+                            },
                             "patterns": [
                                 {
-                                    "include": "#variable"
+                                    "include": "#expression"
                                 },
                                 {
-                                    "include": "#keywords"
+                                    "name": "variable.name.swiftVisualNovels",
+                                    "match": "[a-zA-Z_][a-zA-Z_0-9]*"
                                 },
                                 {
-                                    "include": "#strings"
+                                    "name": "concatenation.swiftVisualNovels",
+                                    "match": "${"
+                                },
+                                {
+                                    "name": "concatenation.swiftVisualNovels",
+                                    "match": "}"
                                 }
-                            ],
-                            "foreground": "white"
+                            ]
                         }
                     ]
                 }
@@ -119,11 +134,13 @@
                 }
             ]
         },
-        "double": {
-            "patterns": {
-                "name": "constant.numeric.double.swiftVisualNovels",
-                "match": "\\b\\d+(\\.\\d+)?([eE][+-]?\\d+)?\\b"
-            }
+        "doubles": {
+            "patterns": [
+                {
+                    "name": "constant.numeric.double.swiftVisualNovels",
+                    "match": "\\b\\d+(\\.\\d+)?([eE][+-]?\\d+)?\\b"
+                }
+            ]
         },
         "declarations": {
             "patterns": [
@@ -203,6 +220,13 @@
                             ]
                         }
                     ]
+                }
+            ]
+        },
+        "expression": {
+            "patterns": [
+                {
+                    "include": "source.swift"
                 }
             ]
         }
