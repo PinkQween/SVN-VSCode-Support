@@ -30,7 +30,7 @@
         },
         {
             "name": "keyword.control.swiftVisualNovels",
-            "match": "\\b(background|character|text|speaker|remove|route|update|new|music|injectedValue|transition|fade)\\b"
+            "match": "\\b(background|character|text|speaker|remove|route|update|new|music|injectedValue|transition|fade|button|sfx|as)\\b"
         },
         {
             "name": "keyword.declaration.swiftVisualNovels",

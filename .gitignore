@@ -1,3 +1,8 @@
-node_modules
-*.vsix
+# Ignore all .svn files
 *.svn
+
+# Allow .svn files only in the /examples directory
+!/examples/**/*.svn
+
+# Ignore node_modules directory
+node_modules/
